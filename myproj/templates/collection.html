@@ -1,0 +1,36 @@
+{% load static %}
+{% include "navbar.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>our collections</title>
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}">
+</head>
+<body>
+    <style>
+body{
+    background-image: url("{% static 'assets/images/homepg (1).jpg' %}");
+ background-size: 100% 100%;
+ background-repeat: no-repeat ;
+ background-attachment: fixed;
+}
+    </style>
+    {% for i in image %}
+
+    <div class="fast">
+        <img src="{% static 'assets/images/co1 (2).png' %}" alt="Fast Service Logo">
+        <p class="def"></p>
+    </div>
+    {% endfor %}
+ 
+  <!-- <div class="reliable">
+    <img src="{% static 'assets/images/co2.png' %}" alt="Reliable Service Logo">
+    <p class="def"></p>
+  </div>-->
+
+
+
+  {% include "footer.html" %}
+</body>
+</html>

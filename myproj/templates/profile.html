@@ -1,0 +1,27 @@
+{% include "navbar.html" %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>profile</title>
+</head>
+<body>
+    <style>
+body{
+background-image: url("{% static 'assets/images/pfpg.jpg' %}");
+background-size: 100% 100%;
+background-repeat: no-repeat ;
+background-attachment: fixed;
+}
+    </style>
+
+
+
+<a href="{% url 'signout' %}" class="log" style="margin-left: 100px;">sign out</a>
+    
+</body>
+</html>

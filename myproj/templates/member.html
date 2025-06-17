@@ -1,0 +1,58 @@
+{% include "navbar.html" %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Upload Photo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+        .upload-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .upload-container h2 {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            display: block;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="upload-container">
+    <h2>Upload Your Photo</h2>
+<form action="/action_page.php">
+
+    {% csrf_token %}
+ <input type="file" id="myFile" name="filename">
+  <input type="submit">
+    </form>
+</div>
+
+</body>
+</html>

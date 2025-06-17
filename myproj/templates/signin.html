@@ -1,0 +1,71 @@
+{% load static %}
+
+{% include "navbar.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>signin</title>
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     body {
+            background-image: url("{% static 'assets/images/homepg (4).jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh;
+            font-family: sans-serif;
+            
+        }
+            .main-content { /* New container for your main content */
+        flex-grow: 1; /* Allows main content to take up available space */
+        display: flex; /* To center the form horizontally/vertically within itself */
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Add some padding around the form */
+    }
+    </style>
+
+</head>
+<body>
+    
+<div class='main-content'>
+    {% block content %}
+    <h1 class="signup" style="                      font-family: Dancing Script, cursive;
+  font-optical-sizing: auto;
+  font-size: 70px;
+  font-style: normal;">sign in </h1>
+     {% endblock %} 
+     <div class="signup">
+         <p class="nav-item">Dont have an account? <a href="{% url 'signup' %}"> click here to make one</a></p>
+
+         <form method="post" action="{% url 'signin' %}">
+             {% csrf_token %}
+             <div class="form-group">
+
+                 <label for="" class="l">username</label>
+                 <input type="text" name="username" class="i"><br>
+                </div>
+                <div class="form-group">
+
+                    <label class="l">password</label>
+                    <input type="password" name="pass1" class="i"><br>
+                </div>
+             <button class="submit-btn">submit</button>
+            </form>
+        </div>
+     
+    
+
+    </div>
+    {% include "footer.html" %}
+</body>
+</html>

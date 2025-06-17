@@ -1,0 +1,319 @@
+
+body
+{
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: #f9f9f9;
+}
+    
+.navbar
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px 40px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    height: 70px;
+    border-radius: 1000px;
+
+}
+    
+.logo-text {
+  font-size: 22px;
+  color: #00b8b8;
+}
+
+.logo-text .small {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.logo-text .oracle 
+{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+}
+
+.nav-center
+ {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item 
+{
+text-decoration: none;
+color: black;
+font-size: 16px;
+position: relative;
+padding-bottom: 4px;
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 30px;
+font-style: normal;
+}
+
+.nav-right 
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-icon
+ {
+    color: #00b8b8;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.log{
+color: #00b8b8;
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 30px;
+font-style: normal;
+
+}
+a:link{
+    text-decoration: none;
+
+}
+a:visited{
+
+    color:black;
+}
+
+
+a:hover{
+color: orange;
+}
+.form-group
+{
+margin-top: 60px;
+}
+
+.signup {
+background-color: rgba(255, 255, 255, 0.9);
+padding: 100px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+width: 350px;
+}
+
+.signup h1 {
+text-align: center;
+margin-bottom: 5px;
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 30px;
+font-style: normal;
+
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+label.l {
+display: block;
+margin-bottom: 0px;
+font-weight: bold;
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 20px;
+font-style: normal;
+
+
+
+}
+
+input.i, input[type="text"], input[type="email"], input[type="password"] {
+width: 100%;
+padding: 2px;
+box-sizing: border-box;
+border-radius: 155px;
+border: 1px solid #ccc;
+
+
+
+}
+
+.submit-btn {
+width: 100%;
+padding: 10px;
+background-color: black;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 30px;
+font-style: normal;
+
+
+}
+
+.submit-btn:hover {
+background-color:orange;
+color: black;
+}
+.fast, .reliable,.eff 
+{
+display: flex;
+flex-direction: column; /* Stack image and text vertically */
+align-items: center;
+text-align: center;
+
+
+}
+
+.fast img, .reliable img, .eff img {
+width: 300px; /* Make logo larger */
+height: auto;
+margin-bottom: 10px;
+border-radius: 1000px;
+margin-right: 100px;
+}
+.reliable img{
+height: 300px;
+width: 320px;
+
+}
+
+
+.search-container {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px auto;
+max-width: 700px;
+background:orange;
+border-radius: 8px;
+padding: 8px 16px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+margin-bottom: 300px;
+}
+
+.search-icon {
+font-size: 20px;
+color:black;
+margin-right: 10px;
+text-decoration: none;
+}
+.search-icon:hover{
+  color: white;
+}
+
+.search {
+flex: 1;
+border: none;
+outline: none;
+
+
+padding: 8px;
+
+font-family: "Dancing Script", cursive;
+font-optical-sizing: auto;
+font-size: 20px;
+font-style: normal;
+
+}
+input.search{
+  border-radius: 8px;
+
+}
+
+
+.footer {
+  background-color:white;
+  color: rgb(6, 6, 6);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 10800px;
+  margin: auto;
+}
+
+.footer-logo {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+  color:orange;
+}
+
+.footer-socials a {
+  color: rgb(7, 7, 7);
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 2 1 600px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-columns div {
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-columns h3 {
+  color:orange;
+  margin-bottom: 10px;
+}
+
+.footer-columns a {
+  display: block;
+  color:orange;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-columns a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+  }
+
+  .footer-columns div {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

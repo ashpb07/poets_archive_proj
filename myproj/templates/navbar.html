@@ -1,0 +1,87 @@
+{% load static %}
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% csrf_token %}
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="{% url 'home' %}">
+        <img src="{% static 'assets/images/logo (1).png' %}" alt="Private Oracle Logo">
+      </a> 
+        <!--
+      <span class="logo-text"><span class="small">PRIVATE</span> <span class="oracle">Oracle</span></span>-->
+    </div>
+{% if user.is_authenticated %}
+<div class="nav-center">
+  <a href="{% url "publish" %}" class="nav-item">Publish</a>
+  <a href="{% url "learn" %}" class="nav-item">Learn from us</a>
+  <a href="{% url 'collection' %}" class="nav-item">Our collections</a>
+  <a href="{% url 'signin' %}" class="nav-item">Become a member</a>
+  <a href="{% url 'about' %}" class="nav-item">About the website</a>
+</div>
+{% else %}
+<div class="nav-center">
+  <a href=" {% url "publish" %} " class="nav-item">Publish</a>
+  <a href="{% url "learn" %}" class="nav-item">Learn from us</a>
+  <a href="{% url 'collection' %}" class="nav-item">Our collections</a>
+  <a href="{% url 'signup' %}" class="nav-item">Become a member</a>
+  <a href="{% url 'about' %}" class="nav-item">About the website</a>
+</div>
+{% endif %}
+   
+    <div class="nav-right">
+      
+      {% if request.path != '/' %}
+      <a href="{% url 'home' %}" class="nav-item " style="margin-right: 60px;">Home</a>
+      <a href="#" class="search-icon" ><i class="fas fa-search"></i></a>
+      
+
+    {% endif %}
+
+    {% if user.is_authenticated %}
+      <h1 class="nav-item" style="font-size: 30px;">Hello, {{ user.first_name }}.....</h1>
+     <a href="{% url 'profile' %}" class="profile-icon" > <i class="fa-solid fa-circle-user"></i></a>
+    
+    {% else %}
+      <h1 class="nav-item" style="font-size: 30px;">Hello....</h1>
+   <!--   <a href="{% url 'signup' %}" class="log">sign up</a>
+      <a href="{% url 'signin' %}" class="log">sign in</a>-->
+    {% endif %}
+  
+  </div>
+
+
+</nav>
+
+
+</body>
+</html>
+
+          
+
+
+          
+      
+   
+
+    
+

@@ -1,0 +1,81 @@
+{% include "navbar.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'assets/images/signuppg.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+           flex-direction: column; /* Stack children vertically */
+            min-height: 100vh;
+            font-family: sans-serif;
+            
+        }
+        .main-content { /* New container for your main content */
+        flex-grow: 1; /* Allows main content to take up available space */
+        display: flex; /* To center the form horizontally/vertically within itself */
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Add some padding around the form */
+    }
+
+        
+    </style>
+</head>
+<body>
+<div class="main-content">
+
+    <div class="signup">
+        <h1 style="font-size: 50px;">Signup</h1>
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <p class="nav-item" style="font-size: 20px;">Already have an account? <a href="{% url 'signin' %}"> click here </a></p>
+                <label class="l">Username</label>
+                <input type="text" name="username" required class="i">
+            </div>
+            <div class="form-group">
+                <label class="l">First Name</label>
+                <input type="text" name="fname" required class="i">
+            </div>
+            <div class="form-group">
+                <label class="l">Last Name</label>
+                <input type="text" name="lname" required class="i">
+            </div>
+            <div class="form-group">
+                <label class="l">Email</label>
+                <input type="email" name="email" required class="i">
+            </div>
+            <div class="form-group">
+                <label class="l">Password</label>
+                <input type="password" name="pass1" required class="i">
+            </div>
+            <div class="form-group">
+                <label class="l">Confirm Password</label>
+                <input type="password" name="pass2" required class="i">
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<br>
+{% include "footer.html" %}
+</body>
+</html>
+

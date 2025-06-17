@@ -11,14 +11,18 @@
 </head>
 <body>
     <style>
-body
-{
- background-image: url("{% static 'assets/images/homepg (2).jpg' %}");
- background-size: 100% 100%;
- background-repeat: no-repeat ;
- background-attachment: fixed;
-}
-</style>
+/*
+
+        body
+        {
+          background-image: url("{% static 'assets/images/homepg (2).jpg' %}");
+          background-size: 100% 100%;
+          background-repeat: no-repeat ;
+          background-attachment: fixed;
+        }
+        
+        */
+      </style>
 {% csrf_token %}
 <br>
    <p class="nav-item" style="text-align: center; margin-top: 4s0px; font-size: 40px;">
@@ -36,12 +40,16 @@ body
 
     </i>
   </a>
-  <input type="text" placeholder="How can we help you?" class="search">
+  {% if user.is_authenticated %}
+  <input type="text" placeholder="How can we help you {{user.first_name}}?" class="search">
+  {% else %}
+  <input type="text" placeholder="How can we help you {{user.first_name}}?" class="search">
+  {% endif %}
 </div>
 
 
 
-<p class="nav-item">
+<p class="nav-item" style="margin-bottom: 700px;">
   Lorem Ipsum is simply dLorem ipsum dolor sit amet, consectetur adipiscing elit, s
       ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
       d exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate

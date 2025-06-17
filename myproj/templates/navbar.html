@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,33 +25,35 @@
   <nav class="navbar">
     <div class="nav-logo">
       <a href="{% url 'home' %}">
-        <img src="{% static 'assets/images/logo.png' %}" alt="Private Oracle Logo">
+        <img src="{% static 'assets/images/logo (1).png' %}" alt="Private Oracle Logo">
       </a> 
         <!--
       <span class="logo-text"><span class="small">PRIVATE</span> <span class="oracle">Oracle</span></span>-->
     </div>
 {% if user.is_authenticated %}
 <div class="nav-center">
-  <a href="#" class="nav-item">Join the team</a>
+  <a href="{% url "publish" %}" class="nav-item">Publish</a>
+  <a href="{% url "learn" %}" class="nav-item">Learn from us</a>
   <a href="{% url 'collection' %}" class="nav-item">Our collections</a>
   <a href="{% url 'signin' %}" class="nav-item">Become a member</a>
   <a href="{% url 'about' %}" class="nav-item">About the website</a>
 </div>
 {% else %}
 <div class="nav-center">
-  <a href="#" class="nav-item">Join the team</a>
+  <a href=" {% url "publish" %} " class="nav-item">Publish</a>
+  <a href="{% url "learn" %}" class="nav-item">Learn from us</a>
   <a href="{% url 'collection' %}" class="nav-item">Our collections</a>
   <a href="{% url 'signup' %}" class="nav-item">Become a member</a>
   <a href="{% url 'about' %}" class="nav-item">About the website</a>
 </div>
 {% endif %}
-    {% if request.path != '/signup/' %}
+   
     <div class="nav-right">
       
       {% if request.path != '/' %}
       <a href="{% url 'home' %}" class="nav-item " style="margin-right: 60px;">Home</a>
       <a href="#" class="search-icon" ><i class="fas fa-search"></i></a>
-      {% else %}
+      
 
     {% endif %}
 
@@ -65,7 +68,7 @@
     {% endif %}
   
   </div>
-{% endif %}
+
 
 </nav>
 

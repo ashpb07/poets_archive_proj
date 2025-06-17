@@ -9,6 +9,8 @@ urlpatterns = [
      path('profile/',views.profile,name='profile'),
      path('signout/',views.signout,name='signout'),
      path('member/',views.member,name="member"),
+      path('publish/',views.publish,name="publish"),
+       path('learn/',views.learn,name="learn"),
       #path('accounts/login/',views.signin, name='login'),
 
 ]

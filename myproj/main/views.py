@@ -133,3 +133,12 @@ def member(request):
   
     
     return render(request,'member.html')
+
+def publish(request):
+    return render(request,'publish.html')
+
+def learn(request):
+    
+    
+        
+    return render(request,'learn.html')

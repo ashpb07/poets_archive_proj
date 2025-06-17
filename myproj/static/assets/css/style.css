@@ -196,31 +196,40 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin: 20px auto;
-max-width: 1000px;
-background: rgb(219,112, 147);
-border-radius: 25px;
+max-width: 700px;
+background:orange;
+border-radius: 8px;
 padding: 8px 16px;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+margin-bottom: 300px;
 }
 
 .search-icon {
 font-size: 20px;
-color: #888;
+color:black;
 margin-right: 10px;
 text-decoration: none;
+}
+.search-icon:hover{
+  color: white;
 }
 
 .search {
 flex: 1;
 border: none;
 outline: none;
-font-size: 16px;
+
+
 padding: 8px;
 
 font-family: "Dancing Script", cursive;
 font-optical-sizing: auto;
-font-size: 30px;
+font-size: 20px;
 font-style: normal;
+
+}
+input.search{
+  border-radius: 8px;
 
 }
 
@@ -245,7 +254,7 @@ font-style: normal;
 }
 
 .footer-logo h2 {
-  color:rgb(219,112, 147);
+  color:orange;
 }
 
 .footer-socials a {
@@ -267,13 +276,13 @@ font-style: normal;
 }
 
 .footer-columns h3 {
-  color:rgb(219,112, 147);
+  color:orange;
   margin-bottom: 10px;
 }
 
 .footer-columns a {
   display: block;
-  color:rgb(219,112, 147);
+  color:orange;
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 14px;
